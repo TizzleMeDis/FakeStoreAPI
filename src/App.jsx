@@ -22,7 +22,7 @@ function App() {
   }
 
   useEffect(() => {
-    axios.get("https://fakestoreapi.com/product")
+    axios.get("https://fakestoreapi.com/products")
       .then((response) => {
         console.log(response.data)
         setProducts(response.data)

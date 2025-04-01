@@ -38,7 +38,7 @@ export default function HomePage({
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-      
+      {/** There is an issue with this line of code. Not understand why this array doesn't pass information through. */}
       <SelectionListing 
         products={[mensProducts[0], womensProducts[0], electronicProducts[0], jeweleryProducts[0]]}
       />
