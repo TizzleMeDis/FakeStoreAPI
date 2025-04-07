@@ -1,0 +1,44 @@
+:root {
+    --background-color: #F0F7EE;
+    --text-color: #000000;
+    --dim-color: #5D737E;
+    --bold-color: #FFF07C;
+
+    --bar-width: 30px;
+    --bar-height: 2px;
+    --hamburger-gap: 6px;
+    --hamburger-margin: 8px;
+    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+
+
+    --transition-timing: ease-in-out 200ms;
+}
+
+.hamburgerMenu input,
+.hamburgerMenu::before,
+.hamburgerMenu::after {
+    content: "";
+    width: var(--bar-width);
+    height: var(--bar-height);
+    border-radius: 9999px;
+    transform-origin: left center;
+    transition: all var(--transition-timing);
+}
+
+.hamburgerMenu {
+    --x-width: calc(var(--hamburger-height) * 1.41421356237); /* calculate the lenth of the bars for an x */
+    
+    display: flex;
+    flex-direction: column;
+    gap: var(--hamburger-gap);
+    width: max-content;
+    z-index: 2;
+    cursor: pointer;
+}
+.hamburgerMenu input {
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    pointer-events: none;
+}

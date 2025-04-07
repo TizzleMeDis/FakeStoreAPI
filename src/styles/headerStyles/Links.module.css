@@ -1,0 +1,22 @@
+/* Offcanvas links */
+.navLinkHover {
+    position: relative;
+    color: white;
+    text-decoration: none;
+}
+  
+.navLinkHover::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: white;
+    width: 0%;
+    transition: width 0.3s ease;
+    pointer-events: none;
+}
+
+.navLinkHover:hover::after {
+    width: 100%;
+}
