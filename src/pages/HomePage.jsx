@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Carousel, Container, Row, Col, Card } from "react-bootstrap";
-import LandingPageStyles from "../styles/LandingPage.module.css";
+import axios from "axios";
+
 import LandingPicture1 from "../assets/LandingPictureGirl.jpg";
 import LandingPicture2 from "../assets/LandingPictureGuy.jpg";
 import AccessoriesImage from "../assets/Accessories.jpg";
@@ -9,8 +10,8 @@ import Card2Pic from "../assets/WomensClothingCard.jpg";
 import Card3Pic from "../assets/JewelryCard.jpg";
 import Card4Pic from "../assets/ElectronicsCard.jpg";
 
-import SelectionListing from "./SelectionListing";
-import axios from "axios";
+import { SelectionListing } from "../components/products";
+import LandingPageStyles from "../styles/LandingPage.module.css";
 
 export default function HomePage() {
   const [products, setProducts] = useState([]);
@@ -132,7 +133,7 @@ export default function HomePage() {
       <Carousel className="flex-grow-1">
         <Carousel.Item>
           <img
-            className="d-relative w-100"
+            className="w-100"
             src={LandingPicture1}
             alt="Slide 1"
           />
@@ -142,7 +143,7 @@ export default function HomePage() {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100" src={LandingPicture2} alt="Slide 2" />
+          <img className="w-100" src={LandingPicture2} alt="Slide 2" />
           <Carousel.Caption className={LandingPageStyles.customCaption}>
             <h3>Second Slide</h3>
             <p>Description for second slide</p>

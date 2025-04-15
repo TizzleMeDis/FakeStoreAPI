@@ -3,7 +3,7 @@ import { Container, Row,Col } from 'react-bootstrap'
 
 export default function Footer() {
   return (
-    <Container fluid className='bg-light pt-5 p-5 border border-grey'>
+    <Container fluid className='bg-black text-light pt-5 p-5 border border-grey'>
         <Row className=''>
             <Col>
                 <h6 className=''>Collections</h6>

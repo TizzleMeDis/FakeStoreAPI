@@ -1,5 +1,6 @@
 /* Offcanvas links */
 .navLinkHover {
+    display: block;
     position: relative;
     color: white;
     text-decoration: none;
@@ -17,6 +18,30 @@
     pointer-events: none;
 }
 
+/* Header Links */
 .navLinkHover:hover::after {
+    width: 100%;
+}
+
+.link {
+    position: relative;
+    text-decoration: none;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 1);
+}
+
+.link::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    right: 0;
+    height: 2px;
+    background-color: white;
+    width: 0%;
+    transition: width 0.3s ease;
+    pointer-events: none;
+}
+
+.link:hover::after {
     width: 100%;
 }

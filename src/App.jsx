@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
-import { HomePage, ProductListPage, ProductDetailsPage, NavigationBar, Footer } from './components/index';
+import {  NavigationBar, Footer } from './components/index';
+import { HomePage, ProductListPage, ProductDetailsPage, NotFoundPage, SignIn, MensClothingPage, WomensClothingPage, JeweleryPage, ElectronicsPage } from './pages/index'
 import { useState, useEffect } from 'react'
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import axios from 'axios'
@@ -10,8 +11,13 @@ function App() {
       <NavigationBar />
       <Routes>
         <Route path='/' element={<HomePage />} />
-        <Route path='/product-list' element={<ProductListPage />} />
+        <Route path='/products/collection' element={<ProductListPage />} />
+        <Route path='/products/mens' element={<MensClothingPage />} />
+        <Route path='/products/womens' element={<WomensClothingPage />} />
+        <Route path='/products/electronics' element={<ElectronicsPage />} />
+        <Route path='/products/jewelery' element={<JeweleryPage />} />
         <Route path='/product-details/:productId' element={<ProductDetailsPage />} />
+        <Route path='*' element={<NotFoundPage />} />
       </Routes>
       <Footer />
     </>

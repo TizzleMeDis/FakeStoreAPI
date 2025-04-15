@@ -1,16 +1,26 @@
 .customCaption {
-    position: absolute;
-    top: 75vh;
-    left: 50vw;
-    transform: translate(-15vw, -15vh);
-    text-align: center;
-    width: 100%;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.2);
+  top: 70% !important;
+  left: 50%;
+  transform: translate(-15%, -50%);
+
+  padding: 1rem 2rem;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  color: white;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.carousel,
-.carousel-inner,
-.carousel-item {
-  height: 100%;
+.selectionCards {
+  height: 500px; 
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+.selectionCards:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
