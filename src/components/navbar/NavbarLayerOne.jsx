@@ -23,7 +23,7 @@ export default function NavbarLayerOne() {
           </Col>
 
           <Col span={10} className="text-center overflow-hidden">
-            <Link href="/">
+            <Link to="/">
                 <img src={Logo} style={{ width: "3rem", scale: "3" }} alt="Logo" />
             </Link>
           </Col>

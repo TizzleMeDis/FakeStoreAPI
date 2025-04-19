@@ -12,7 +12,7 @@ export default function HamburgerMenu() {
 
   return (
     <span className="mx-2">
-      <Button variant="light" onClick={handleShow}><i className="bi bi-list fs-4 mx-2 text-black"></i></Button>
+      <Button variant="black" onClick={handleShow}><i className="bi bi-list fs-4 mx-2 text-light"></i></Button>
 
       <Offcanvas show={show} onHide={handleClose} className="bg-dark text-light">
         <Offcanvas.Header closeButton closeVariant="white" className="bg-black text-light">

@@ -12,6 +12,7 @@ import Card4Pic from "../assets/ElectronicsCard.jpg";
 
 import { SelectionListing } from "../components/products";
 import LandingPageStyles from "../styles/LandingPage.module.css";
+import { Link } from "react-router-dom";
 
 export default function HomePage() {
   const [products, setProducts] = useState([]);
@@ -22,19 +23,11 @@ export default function HomePage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const productCategories = {
-    products,
-    mensProducts,
-    womensProducts,
-    jeweleryProducts,
-    electronicProducts,
-  };
-
   const items = [
-    { id: 1, title: "Men's Clothing", text: "Content 1" },
-    { id: 2, title: "Women's Clothing", text: "Content 2" },
-    { id: 3, title: "Jewelery", text: "Content 3" },
-    { id: 4, title: "Electronics", text: "Content 4" },
+    { id: 1, title: "Men's Clothing", text: "Bold. Refined. Tailored looks that turn heads." },
+    { id: 2, title: "Women's Clothing", text: "Luxe fashion for modern icons. Unapologetically chic." },
+    { id: 3, title: "Jewelery", text: "Timeless sparkle. Statement pieces crafted to impress." },
+    { id: 4, title: "Electronics", text: "Sleek tech meets cutting-edge style. Elevate your everyday." },
   ];
   const chunked = [];
   for (let i = 0; i < items.length; i += 3) {
@@ -138,15 +131,15 @@ export default function HomePage() {
             alt="Slide 1"
           />
           <Carousel.Caption className={LandingPageStyles.customCaption}>
-            <h3>First Slide</h3>
-            <p>Description for first slide</p>
+            <h3>Welcome to Blvck US</h3>
+            <p>Choose from our latest selections of clothing</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img className="w-100" src={LandingPicture2} alt="Slide 2" />
           <Carousel.Caption className={LandingPageStyles.customCaption}>
-            <h3>Second Slide</h3>
-            <p>Description for second slide</p>
+            <h3>Browse to your content</h3>
+            <p>Find the latest outfits and inspire innovation</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
@@ -160,7 +153,7 @@ export default function HomePage() {
 
       <Container
         fluid
-        className="d-flex align-items-center justify-content-center w-100 min-vh-100 bg-success"
+        className="d-flex align-items-center justify-content-center w-100 min-vh-100"
         style={{
           backgroundImage: `url(${AccessoriesImage})`,
           backgroundSize: "cover",
@@ -172,12 +165,12 @@ export default function HomePage() {
           className="text-center text-light w-100 py-5 justify-content-center rounded"
           style={{ backgroundColor: `rgba(0, 0, 0, 0.3)` }}
         >
-          <h1 className="my-3">Accessories to select from</h1>
+          <h1 className="my-3">Accessories & Gadgets</h1>
           <Col className="my-5" xs={12} sm={3} md={2} lg={2} xl={2} xxl={2}>
-            <h2>Jewelery</h2>
+            <Link className={`${LandingPageStyles.linkAccessories}`} to="/products/jewelery">Jewelery</Link>
           </Col>
           <Col className="my-5" xs={12} sm={3} md={2} lg={2} xl={2} xxl={2}>
-            <h2>Electronics</h2>
+            <Link className={`${LandingPageStyles.linkAccessories}`} to="/products/electronics">Electronics</Link>
           </Col>
         </Row>
       </Container>
@@ -190,25 +183,12 @@ export default function HomePage() {
           {items.map((item, idx) => (
             <div
               key={item.id}
-              className="flex-shrink-0 text-white p-5 rounded shadow"
-              style={{
-                width: "calc(100% / 3)",
-                height: "100%",
-                backgroundImage: `url(${cardImages[idx % cardImages.length]})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                scrollSnapAlign: "start",
-                alignItems: "center",
-              }}
-            >
-              <h3 className="bg-dark bg-opacity-50 p-2 rounded">
+              className={`${LandingPageStyles.cardContainer} flex-shrink-0 text-white p-5 rounded shadow`}
+              style={{backgroundImage: `url(${cardImages[idx % cardImages.length]})`}} >
+              <h3 className="bg-dark bg-opacity-50 p-2 my-5 rounded">
                 {item.title}
               </h3>
-              <p className="bg-dark bg-opacity-50 p-2 rounded">{item.text}</p>
+              <p className="bg-dark bg-opacity-50 p-2 my-5 text-center fs-5 rounded">{item.text}</p>
             </div>
           ))}
         </div>

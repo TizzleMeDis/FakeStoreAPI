@@ -1,4 +1,5 @@
 import BlogPost from './BlogPost'
 import SelectionListing from './SelectionListing'
-
-export { BlogPost, SelectionListing }
+import LandingPage from './LandingPage'
+import ProductSection from './ProductSection'
+export { BlogPost, SelectionListing, LandingPage, ProductSection  }

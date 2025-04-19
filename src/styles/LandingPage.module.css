@@ -20,7 +20,69 @@
   object-fit: contain;
   transition: all 0.3s ease;
 }
-.selectionCards:hover {
+
+.cardWrapper {
+  position: relative;
+  height: 100%; /* optional but helpful */
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Make overlay fill the card */
+  height: 100%; /* Make overlay fill the card */
+  background-color: rgba(0, 0, 0, 0); /* transparent by default */
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.cardWrapper:hover .overlay {
   transform: scale(1.05);
+  background-color: rgba(0, 0, 0, 0.3); /* on hover */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cardWrapper:hover .selectionCards{
+  transform: scale(1.05);
+}
+.linkAccessories {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-size: x-large;
+
+  padding: 8px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.linkAccessories:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
+}
+
+.cardContainer {
+  width: calc(100% / 3);
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .cardContainer {
+    width: calc(100% / 2);
+  }
+}  
+@media (max-width: 767.98px) {
+  .cardContainer {
+    width: calc(100% / 1);
+  }
 }
