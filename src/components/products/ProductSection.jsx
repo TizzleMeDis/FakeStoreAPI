@@ -17,14 +17,12 @@ export default function ProductSection({ products }) {
                 src={item.image}
                 alt={item.title}
               />
-              <Card.Body>
-                <div className="d-flex justify-content-center">
-                  <Card.Text>{item.category}</Card.Text>
-                </div>
-              </Card.Body>
             </Card>
         
-            <div className={Styles.overlay}></div> {/* overlay for shadowing effect */}
+            <div className={`${Styles.overlay} d-flex flex-column justify-content-center align-items-center text-white`}>
+                <h6 className={Styles.overlayText}>{item.title}</h6>
+                <h6 className={Styles.overlayText}>{item.price}</h6>    
+            </div> {/* overlay for shadowing effect */}
           </div>
         </Col>
         ))}

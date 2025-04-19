@@ -38,9 +38,17 @@
   z-index: 10;
 }
 
+.overlayText {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cardWrapper:hover .overlayText{
+  opacity: 1;
+}
 .cardWrapper:hover .overlay {
   transform: scale(1.05);
-  background-color: rgba(0, 0, 0, 0.3); /* on hover */
+  background-color: rgba(0, 0, 0, 0.5);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
