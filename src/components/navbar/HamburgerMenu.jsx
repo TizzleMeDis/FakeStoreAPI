@@ -8,7 +8,7 @@ export default function HamburgerMenu() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const routeNames = ["Home", "Collection", "Mens", "Womens", "Electronics", "Jewelery", "Add-Item", "Edit-Item", "Delete-Item"];
+  const routeNames = ["Home", "Collection", "Mens", "Womens", "Electronics", "Jewelery", "Edit-Products"];
 
   return (
     <span className="mx-2">
