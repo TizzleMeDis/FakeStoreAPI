@@ -18,7 +18,12 @@
 .selectionCards {
   height: 500px; 
   object-fit: contain;
+  transform: scale(1);
   transition: all 0.3s ease;
+}
+
+.selectionCards:hover {
+  transform: scale(1.05);
 }
 
 .cardWrapper {

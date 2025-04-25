@@ -29,9 +29,11 @@ export default function NavbarLayerOne() {
           </Col>
 
           <Col span={1} className="text-end">
-            <Button className="bg-black text-white border-black">
-              <i className="bi bi-person fs-4 mx-2"></i>
-            </Button>
+            <Link to={'/login'}>
+              <Button className="bg-black text-white border-black">
+                <i className="bi bi-person fs-4 mx-2"></i>
+              </Button>
+            </Link>
             <ShoppingBag />
           </Col>
         </Row>

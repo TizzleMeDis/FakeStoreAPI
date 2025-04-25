@@ -1,16 +1,17 @@
 import React from 'react'
 import { Container, Row,Col } from 'react-bootstrap'
-
+import { Link } from 'react-router-dom'
+import Styles from '../styles/headerStyles/Links.module.css'
 export default function Footer() {
+    const links = ['Collection', 'Mens', 'Womens', 'Electronics', 'Jewelery']
   return (
-    <Container fluid className='bg-black text-light pt-5 p-5 border border-grey'>
+    <Container fluid className='bg-black text-light pt-5 p-5'>
         <Row className=''>
             <Col>
-                <h6 className=''>Collections</h6>
-                <p>Men</p>
-                <p>Women</p>
-                <p>Electronics</p>
-                <p>Jewelery</p>
+                <h6>Pages</h6>
+                {links.map((link, key) => (
+                    <Link key={key} to={`products/${link.toLowerCase()}`} className={Styles.footerLink}>{link}</Link>
+                ))}
             </Col>
             <Col>
                 <h6 className=''>Information</h6>
