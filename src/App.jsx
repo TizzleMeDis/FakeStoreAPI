@@ -1,9 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import {  NavigationBar, Footer } from './components/index';
 import { HomePage, ProductListPage, ProductDetailsPage, NotFoundPage, SignIn, MensClothingPage, WomensClothingPage, JeweleryPage, ElectronicsPage, EditProductList } from './pages/index'
-import { useState, useEffect } from 'react'
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import axios from 'axios'
 
 function App() {
   return (

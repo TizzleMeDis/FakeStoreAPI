@@ -42,12 +42,12 @@ export default function ProductDetailsPage() {
     );
 
   return (
-    <div className="d-flex h-75">
+    <div className="d-flex flex-column flex-md-row h-75 align-items-center">
       <div className="w-50">
         <img 
           src={`${product.image}`} 
-          className="p-5"
-          style={{objectFit: 'contain', width: '50vw'}}/>
+          className="p-md-5"
+          style={{objectFit: 'contain', width: '50vw', height: '50vh'}}/>
       </div>
       <div className="d-flex flex-column p-4 align-items-left justify-content-center">
         <h2>{product.title}</h2>

@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Carousel, Container, Row, Col, Card } from "react-bootstrap";
+import React, { useState, useEffect } from "react";
+import { Carousel, Container, Row, Col } from "react-bootstrap";
 import axios from "axios";
 
 import LandingPicture1 from "../assets/LandingPictureGirl.jpg";
@@ -35,19 +35,7 @@ export default function HomePage() {
   }
 
   const cardImages = [Card1Pic, Card2Pic, Card3Pic, Card4Pic];
-  const carouselRef = useRef(null);
 
-  const scrollLeft = () => {
-    if (carouselRef.current) {
-      carouselRef.current.scrollLeft -= carouselRef.current.offsetWidth / 3;
-    }
-  };
-
-  const scrollRight = () => {
-    if (carouselRef.current) {
-      carouselRef.current.scrollLeft += carouselRef.current.offsetWidth / 3;
-    }
-  };
   function categorizesItems() {
     if (products.length === 0) return;
 
